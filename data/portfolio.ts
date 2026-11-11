@@ -7,20 +7,9 @@ export type PublishedProject = {
   kind: ProjectKind;
 };
 
-/** February 2020 — first Flutter role (IT-Hobbies). */
-const CAREER_START = new Date(2020, 1, 1);
-
-export function getTotalExperienceLabel(now = new Date()): string {
-  let months =
-    (now.getFullYear() - CAREER_START.getFullYear()) * 12 +
-    (now.getMonth() - CAREER_START.getMonth());
-  if (now.getDate() < CAREER_START.getDate()) months -= 1;
-  const years = Math.max(0, Math.floor(months / 12));
-  const rem = months % 12;
-  if (years <= 0) return "1+ years";
-  if (rem === 0) return `${years} years`;
-  if (rem >= 9) return `${years + 1}+ years`;
-  return `${years}+ years`;
+/** Professional experience label (hero pill + summary). */
+export function getTotalExperienceLabel(): string {
+  return "6+ years";
 }
 
 export function getProfileSummary(): string {
