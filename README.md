@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Muhammad Arslan — Portfolio
 
-## Getting Started
+One-page portfolio built with [Next.js](https://nextjs.org/) (App Router), [Tailwind CSS](https://tailwindcss.com/), and [Framer Motion](https://www.framer.com/motion/). Published app tiles fetch preview artwork from App Store / Google Play HTML via `/api/store-preview` (Open Graph and related meta tags).
 
-First, run the development server:
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy to Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Push this repository to GitHub (or GitLab / Bitbucket).
+2. Import the repo in the [Vercel dashboard](https://vercel.com/new) and deploy with the default Next.js settings.
 
-## Learn More
+Or use the CLI (requires a [Vercel account](https://vercel.com/signup) and login):
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npx vercel
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For production:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npx vercel --prod
+```
 
-## Deploy on Vercel
+## Data
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Copy and store links live in `data/portfolio.ts`. Non-store URLs from the CV (e.g. admin panels or marketing sites) are intentionally omitted from the **Published apps** section.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+Private / personal use.
